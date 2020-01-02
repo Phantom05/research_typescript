@@ -122,3 +122,17 @@ console.log( strLength );
 
 let someValue1 :any = "this is a string";
 let strLength1 : number = (someValue1 as string).length;
+console.log( strLength1 );
+
+function f(){
+  var a = 10;
+  return function g(){
+    var b = a+1;
+    return b;
+  }
+}
+
+var g= f();
+console.log(
+  g()
+);
