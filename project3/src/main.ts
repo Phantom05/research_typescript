@@ -136,3 +136,31 @@ var g= f();
 console.log(
   g()
 );
+console.clear();
+
+
+
+
+
+
+// function sor(arr:Array<number>,type:Array<number>){
+//   console.log(type,'type');
+//   const idxList = type.map((i:number ,idx:number)=>idx);
+//   console.log(idxList);
+
+//   arr.reduce(item=>{
+
+//   },[]);
+
+//   return arr
+// }
+
+// const data = new Array(100).fill().map((i:any,idx:number)=>idx)
+
+
+// console.log(
+//   sor(data,[3,1,3])
+// );
+// console.log(
+  
+// );
