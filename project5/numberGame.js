@@ -39,3 +39,14 @@ function world1(a) {
 }
 console.log(world1());
 // as const 확실하게 써보기
+// function add(a:number,b:number):(c:string)=>(d:string)=>boolean{
+//   return (c:string) =>{
+//     return (d:string)=>{
+//       return false;
+//     }
+//   }
+// }
+function add(a) {
+    return function (b) { return function (c) { return a + b + c; }; };
+}
+console.log(add(10)(50)(100));

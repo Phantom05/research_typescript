@@ -42,13 +42,13 @@ console.log(
   f2()
 );
 
-function add(a:number,b:number):(c:string)=>(d:string)=>boolean{
-  return (c:string) =>{
-    return (d:string)=>{
-      return false;
-    }
-  }
-}
+// function add(a:number,b:number):(c:string)=>(d:string)=>boolean{
+//   return (c:string) =>{
+//     return (d:string)=>{
+//       return false;
+//     }
+//   }
+// }
 
 // 오버로딩
 const obj2:{a:(b?:number, c?:string)=>string} = {
@@ -73,4 +73,5 @@ const hello: number = 3;
 // (<string><unknown>hello)
 
 console.clear();
+
 

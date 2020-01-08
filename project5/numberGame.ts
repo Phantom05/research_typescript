@@ -70,3 +70,22 @@ console.log(
 );
 
 // as const 확실하게 써보기
+
+
+
+// function add(a:number,b:number):(c:string)=>(d:string)=>boolean{
+//   return (c:string) =>{
+//     return (d:string)=>{
+//       return false;
+//     }
+//   }
+// }
+
+
+function add(a:number):(b:number)=>(c:number)=>number{
+  return (b:number)=> (c:number)=> a + b + c
+}
+
+console.log(
+  add(10)(50)(100)
+);
