@@ -82,6 +82,7 @@ console.log(
 // }
 
 
+
 function add(a:number):(b:number)=>(c:number)=>number{
   return (b:number)=> (c:number)=> a + b + c
 }
