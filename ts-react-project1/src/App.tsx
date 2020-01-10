@@ -1,13 +1,14 @@
-import React,{useState} from 'react';
+import React,{useState,useReducer} from 'react';
 import logo from './logo.svg';
 import './App.css';
 // import Greetings from './comps/Greetings';
 // import Counter from './comps/Counter';
 // import MyForm from './comps/MyForm';
 // import Test from './comps/Test';
-import TodoList from './comps/Todo/TodoList';
-import Checker from './comps/Checker';
+// import TodoList from './comps/Todo/TodoList';
+// import Checker from './comps/Checker';
 import TsTest from './comps/TsTest';
+import Counter from './comps/Counter/Counter';
 
 
 
@@ -20,17 +21,20 @@ function App(){
   const handleSubmit = (value:string):void=>{
     setValue(value)
   }
+  
   return(
     <div className="App">
       <header className="App-header">
         <span>
           <img src={logo} className="App-logo small" alt="logo" />
-          {/* <TodoList/> */}
           <TsTest 
             name="hell oworld"
             onClick={handleClick}
             enterValue={value}
             onSubmit={handleSubmit}
+          />
+          <Counter 
+          
           />
         </span>
       </header>
