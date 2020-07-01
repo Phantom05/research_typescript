@@ -5,9 +5,9 @@ import { PlainButton } from '@/components/common/button';
 function HomeContainer() {
   return (
     <div>
-      <PlainButton />
       <PlainTemplate header="Header" main="Main">
-        Children
+        String
+        <PlainButton />
       </PlainTemplate>
     </div>
   );
