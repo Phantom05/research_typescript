@@ -1,8 +1,5 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Root from './Root';
 
-import { Hello } from './components/Hello';
-ReactDOM.render(
-  <Hello compolier="TypeScript" framework="React" />,
-  document.getElementById('root'),
-);
+ReactDOM.render(<Root />, document.getElementById('root'));

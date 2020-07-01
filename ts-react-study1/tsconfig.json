@@ -9,7 +9,15 @@
     "moduleResolution": "node",
     "target": "es5",
     "allowJs": true,
-    "jsx": "react"
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["src/*"],
+      "*": ["./src/*"]
+    },
+    "allowSyntheticDefaultImports": true
+    // "noEmit": true //ts가 js파일을 작성하지 못하도록 함 babel한태 이관
   },
-  "include": ["./src/**/*"]
+  "include": ["./src/**/*"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
 }

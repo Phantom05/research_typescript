@@ -1,0 +1,25 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": false
+      }
+    ],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    "react-hot-loader/babel",
+    [
+      //ts쓸땐 tsconfig랑 맞춰줘야 하나봄..
+      "module-resolver",
+      {
+        "root": ["./src/**"],
+        "alias": {
+          "@com": "./src/components"
+          // "test": "./test"
+        }
+      }
+    ]
+  ]
+}
