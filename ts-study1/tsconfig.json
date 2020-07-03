@@ -1,0 +1,48 @@
+// {
+//   "compilerOptions": {
+//     "sourceMap": true,
+//     "target": "es5",
+//     "jsx": "react",
+//     "module": "es6",
+//     "moduleResolution": "node",
+//     "experimentalDecorators": true,
+//     "declaration": false,
+//     "removeComments": true,
+//     "noImplicitReturns": true,
+//     "noUnusedLocals": true,
+//     "strict": true,
+//     "outDir": "build",
+//     "lib": ["es6", "es7", "dom"],
+//     "baseUrl": ".",
+//     "paths": {
+//       "~/*": ["./src/*"],
+//       "@/*": ["./src/*"]
+//     },
+//     "allowSyntheticDefaultImports": true
+//   },
+//   "include": ["./src/**/*"],
+//   "exclude": ["build", "node_modules"]
+// }
+
+{
+  "compilerOptions": {
+    "outDir": "./public/",
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "module": "es6",
+    "moduleResolution": "node",
+    "target": "es5",
+    "allowJs": true,
+    "jsx": "react",
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./src/*"],
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["./src/**/*"],
+  "exclude": ["build", "node_modules"]
+}
