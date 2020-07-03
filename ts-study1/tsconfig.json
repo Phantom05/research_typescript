@@ -1,39 +1,18 @@
-// {
-//   "compilerOptions": {
-//     "sourceMap": true,
-//     "target": "es5",
-//     "jsx": "react",
-//     "module": "es6",
-//     "moduleResolution": "node",
-//     "experimentalDecorators": true,
-//     "declaration": false,
-//     "removeComments": true,
-//     "noImplicitReturns": true,
-//     "noUnusedLocals": true,
-//     "strict": true,
-//     "outDir": "build",
-//     "lib": ["es6", "es7", "dom"],
-//     "baseUrl": ".",
-//     "paths": {
-//       "~/*": ["./src/*"],
-//       "@/*": ["./src/*"]
-//     },
-//     "allowSyntheticDefaultImports": true
-//   },
-//   "include": ["./src/**/*"],
-//   "exclude": ["build", "node_modules"]
-// }
-
 {
   "compilerOptions": {
-    "outDir": "./public/",
+    "outDir": "./dist/",
     "sourceMap": true,
     "strict": true,
     "noImplicitReturns": true,
     "noImplicitAny": true,
     "module": "es6",
+    "lib": ["es6", "es7", "dom"],
     "moduleResolution": "node",
+    "removeComments": true,
     "target": "es5",
+    "declaration": false,
+    "noUnusedLocals": true,
+    "experimentalDecorators": true,
     "allowJs": true,
     "jsx": "react",
     "allowSyntheticDefaultImports": true,

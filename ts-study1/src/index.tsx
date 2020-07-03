@@ -2,7 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "~/components/App";
 import Button from "~/components/common/Button";
+import _ from "lodash";
+import { img_apple } from "~/components/base/images";
 
+const abc = [1, 2, 3];
+
+const aaa = _.map(abc, (i) => i + 5);
+console.log(aaa, "aaa");
 export interface HelloProps {
   compiler: string;
   framework: string;
@@ -10,8 +16,9 @@ export interface HelloProps {
 
 export const Hello = (props: HelloProps) => (
   <h1>
-    Hello from {props.compiler} and {props.framework}! <App />
+    Hello from z{props.compiler} and {props.framework}! <App />
     <Button />
+    <img src={img_apple} alt="" />
   </h1>
 );
 
