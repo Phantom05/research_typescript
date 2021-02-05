@@ -4,16 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script defer src="./index.js"></script>
+    <!-- <script defer src="./index.js"></script> -->
+    <script defer src="./index1.js"></script>
+    <style>
+      #computer {
+        width: 142px;
+        height: 200px;
+        background-position: 0 0;
+      }
+
+      .todo__item_box {
+        border: 1px solid gray;
+        cursor: pointer;
+      }
+      .todo__item_box:hover {
+        background: #ececec;
+      }
+      .checked {
+        text-decoration: line-through;
+      }
+    </style>
   </head>
   <body>
     <div id="computer">
       <img src="" alt="" />
     </div>
     <div>
-      <button id="rock" class="btn">가위</button>
-      <button id="scissor" class="btn">바위</button>
-      <button id="paper" class="btn">보</button>
+      <button id="rock" class="btn">ROCK</button>
+      <button id="scissor" class="btn">SCISSORS</button>
+      <button id="paper" class="btn">PAPER</button>
     </div>
+    <div id="point"></div>
+    <div id="root"></div>
   </body>
 </html>
