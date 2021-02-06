@@ -179,3 +179,98 @@ let rdv1 = dv1.map((_) => {
   return _.toUpperCase();
 });
 console.log(rdv1, "rdv1");
+
+function buildArray2() {
+  let a = []; // any[];
+  a.push(1);
+  a.push("x");
+  return a;
+}
+
+let myag4 = buildArray2();
+// myag4.push(true)
+
+let aw2: [number] = [1];
+// [이름,성씨,생년] 튜플
+let bw2: [string, string, number] = ["malcolm", "gladwell", 1963];
+
+let trainFares: [number, number?][] = [[3.375], [8.27, 7.7], [10, 50]];
+
+let moreTrainFares: ([number] | [number, number])[] = [[1], [2.5, 2], [3, 45]];
+
+let friends: [string, ...string[]] = ["Sara", "Tali", "Chloe", "Claire"];
+console.log(friends, "fre");
+
+let listv4: [number, boolean, ...(number | string)[]] = [
+  1,
+  false,
+  "a",
+  "b",
+  "c",
+  1,
+];
+
+interface Te1 {
+  name: string;
+  age: number;
+}
+interface Te2 {
+  name: string;
+  age: number;
+  hobby: string;
+}
+
+let listvf2: [...(Te2 | Te1)[]] = [
+  {
+    name: "h",
+    age: 5,
+    hobby: "computer",
+  },
+  {
+    name: "h",
+    age: 5,
+  },
+];
+
+let as: readonly number[] = [1, 2, 3];
+let bs: readonly number[] = as.concat(4);
+
+let three = bs[2];
+// as[4] = 5;
+
+type Abh2 = readonly string[]; // readonly string[];
+type Bbh2 = ReadonlyArray<string>; // readonly string[];
+type Cbh2 = Readonly<string[]>; // readonly string[];
+type Dbh2 = readonly [number, string]; // readonly [number,string];
+type Ebh2 = Readonly<[number, string]>; // readonly [number, string];
+
+// (a) number 또는 null을 반환하는 함수
+function aab(x: number) {
+  if (x < 10) {
+    return x;
+  }
+  return null;
+}
+
+// (b) undefined를 반환하는 함수
+function bab() {
+  return undefined;
+}
+
+// (c) void를 반환하는 함수
+function cab() {
+  let a = 2 + 2;
+  let b = a * a;
+}
+
+// (d) never를 반환하는 함수
+function dab() {
+  throw TypeError("I always error");
+}
+
+// (e) never를 반환하는 또 다른 함수
+function eab() {
+  while (true) {
+    // doSomething();
+  }
+}
