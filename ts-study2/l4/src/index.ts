@@ -274,3 +274,119 @@ function eab() {
     // doSomething();
   }
 }
+
+console.clear();
+// NOTE: 열거형
+// 열거형의 이름은 단수 명사로 쓰고, 첫 문자를 대문자로 하는 것이 관례다, 키도 앞글자를 대문자로 표시한다.
+enum Language {
+  English,
+  Spanish,
+  Russian,
+}
+
+enum Lanugage {
+  English = 0,
+  Spanish = 1,
+  Russian = 2,
+}
+
+enum Language {
+  Korean = 100,
+  Japanese,
+}
+
+let myFirstLanguage = Language.Russian;
+let mySecondLanguage = Language["English"];
+console.log(myFirstLanguage, mySecondLanguage);
+console.log(Language.Japanese);
+
+enum Colora {
+  Red = "#c10000",
+  Blue = "#007ac1",
+  Pink = 0xc10050,
+  White = 255,
+}
+
+let reda = Colora.Red;
+
+console.log(reda, Colora[255]);
+
+const enum Colorb {
+  Red = 125,
+}
+
+console.log(Colorb.Red, "Colorb");
+// console.log(Colorb[125]);NOTE: 역방향 찾기가 안됨 const는
+// const enum은 사용하지 말것, 채워넣기 기능을 피해야함,
+
+const enum Flipable {
+  Burger = "Burger",
+  Chaire = "Chaire",
+  Cup = "Cup",
+  Skateboard = "Skateboard",
+  Table = "Table",
+}
+
+function flip(f: Flipable) {
+  return "flipped it";
+}
+
+flip(Flipable.Chaire);
+// flip(12);
+// NOTE: 단순히 enum을 키값만쓰면 숫자가 다 들어갈수있지만,
+// 위와같이 각각 string으로 이름들을 넣어주면 숫자를 방지할 수 있다.
+
+// enum은 별로임, 책에서 추천하지 않음
+
+let ddddddd = [true, true, false];
+
+let e = {
+  type: "ficus",
+};
+
+let f = [1, false];
+// : [number,boolean]
+// (number|boolean)[]
+let ggg = null;
+
+function add(a: number, b: number): number {
+  return a + b;
+}
+console.log(add(10, 5));
+
+function greet(name: string) {
+  return "hello" + name;
+}
+
+let greet2 = function (name: string) {
+  return "hello" + name;
+};
+
+let greet3 = (name: string) => {
+  return "hello" + name;
+};
+
+let greet4 = (name: string) => "hello" + name;
+
+function log(message: string, userId = "Not signed in") {
+  let time = new Date().toLocaleDateString();
+  console.log(time, message, userId);
+}
+console.log(log("hello", "24"));
+
+console.clear();
+function sum(numbers: number[]): number {
+  return numbers.reduce((total, n) => total + n, 0);
+}
+console.log(sum([1, 2, 3]));
+
+function sumVariadic(...numbers: number[]): number {
+  console.log(numbers, "numbers");
+  return numbers.reduce((total, n) => total + n, 0);
+}
+
+console.log(sumVariadic(1, 2, 3, 4, 5, 6, 7, 8, 9, 10));
+
+interface Console {
+  log(message?: any, ...optionalParams: any[]): void;
+}
