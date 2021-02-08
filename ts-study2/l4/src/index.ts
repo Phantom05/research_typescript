@@ -1,3 +1,4 @@
+export {};
 // console.log("he llo");
 
 // let a = 1 + 2;
