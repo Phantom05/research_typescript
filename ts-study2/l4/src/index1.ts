@@ -1,3 +1,4 @@
+export {};
 function sum(...items: number[]) {
   return items.reduce((acc, i) => acc + i, 0);
 }
@@ -203,3 +204,54 @@ function someFunc(val: string | number, isNumber: boolean) {
     return (val as string).toUpperCase();
   }
 }
+
+console.clear();
+type Filter1 = {
+  <T>(array: T[], f: (item: T) => boolean): T[];
+};
+
+function t_first<T>(arr: T[]): T {
+  return arr[0];
+}
+
+console.log(
+  t_first<number>([1, 2, 3, 4, 5])
+);
+
+function t_map(array: unknown[], f: (item: unknown) => unknown): unknown[] {
+  let result = [];
+  for (let i = 0; i < array.length; i++) {
+    result[i] = f(array[i]);
+  }
+  return result;
+}
+
+t_map(["z", 1, 4, 3], function (item) {
+  console.log(item, "unknown");
+});
+
+function t_j_map<T, U>(array: T[], f: (item: T) => U): U[] {
+  let result = [];
+  for (let i = 0; i < array.length; i++) {
+    result[i] = f(array[i]);
+  }
+  return result;
+}
+
+t_j_map(["z", "f", "a"], function (item) {
+  console.log(item, "제네릭");
+});
+
+// NOTE: 제네릭은 타입스크립트가 추론을 유도하여 적용되게 하는게 좋음
+
+let promise = new Promise<number>((resolve) => resolve(45));
+
+promise.then((result) => result * 4);
+
+// NOTE: 이렇게 함수처럼 만들어서 쓸 수도 있음
+type e_MyEvent<T> = {
+  target: T;
+  type: string;
+};
+
+type ButtonEvent = e_MyEvent<HTMLButtonElement>;
